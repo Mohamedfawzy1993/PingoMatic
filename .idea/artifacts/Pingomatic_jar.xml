@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Pingomatic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Pingomatic_jar</output-path>
+    <root id="archive" name="Pingomatic.jar">
+      <element id="module-output" name="Pingomatic" />
+    </root>
+  </artifact>
+</component>

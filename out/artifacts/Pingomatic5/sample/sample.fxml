@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <TextField fx:id="text1" promptText="Ping IP" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Circle fx:id="red1" fill="RED" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="0" GridPane.columnIndex="1" visible="false"/>
+    <Circle fx:id="Green1" fill="GREEN" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="0" GridPane.columnIndex="2" visible="false" />
+
+    <TextField fx:id="text2" promptText="Ping IP" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <Circle fx:id="red2" fill="RED" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="1" GridPane.columnIndex="1" visible="false"/>
+    <Circle fx:id="Green2" fill="GREEN" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="1" GridPane.columnIndex="2" visible="false" />
+
+    <TextField fx:id="text3" promptText="Ping IP" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <Circle fx:id="red3" fill="RED" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="2" GridPane.columnIndex="1" visible="false"/>
+    <Circle fx:id="Green3" fill="GREEN" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="2" GridPane.columnIndex="2" visible="false" />
+
+    <TextField fx:id="text4" promptText="Ping IP" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+    <Circle fx:id="red4" fill="RED" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="3" GridPane.columnIndex="1" visible="false"/>
+    <Circle fx:id="Green4" fill="GREEN" radius="10.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="3" GridPane.columnIndex="2" visible="false" />
+
+    <Button text="start" onAction="#startPing" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+    <Button text="Stop" onAction="#stopPing" GridPane.rowIndex="3" GridPane.columnIndex="4"/>
+    <Label fx:id="label" text="Stopped" GridPane.columnIndex="4" GridPane.rowIndex="4"/>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+       <RowConstraints />
+       <RowConstraints />
+       <RowConstraints />
+       <RowConstraints />
+   </rowConstraints>
+
+</GridPane>

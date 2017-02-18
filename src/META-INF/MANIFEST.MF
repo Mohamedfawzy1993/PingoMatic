@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Class-Path: "C:\Program Files\Java\jdk1.8.0_111\jre\lib\charsets.jar;C
+ :\Program Files\Java\jdk1.8.0_111\jre\lib\deploy.jar;C:\Program Files
+ \Java\jdk1.8.0_111\jre\lib\ext\access-bridge-64.jar;C:\Program Files\
+ Java\jdk1.8.0_111\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1
+ .8.0_111\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_111\jre
+ \lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\j
+ fxrt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\localedata.ja
+ r;C:\Program Files\Java\jdk1.8.0_111\jre\lib\ext\nashorn.jar;C:\Progr
+ am Files\Java\jdk1.8.0_111\jre\lib\ext\sunec.jar;C:\Program Files\Jav
+ a\jdk1.8.0_111\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\
+ jdk1.8.0_111\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0
+ _111\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_111\jre
+ \lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\javaws.
+ jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jce.jar;C:\Program Fil
+ es\Java\jdk1.8.0_111\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_1
+ 11\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jsse
+ .jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\management-agent.jar;
+ C:\Program Files\Java\jdk1.8.0_111\jre\lib\plugin.jar;C:\Program File
+ s\Java\jdk1.8.0_111\jre\lib\resources.jar;C:\Program Files\Java\jdk1.
+ 8.0_111\jre\lib\rt.jar;D:\courseTempfiles\Pingomatic\out\production\P
+ ingomatic;C:\Program Files (x86)\JetBrains\IntelliJ IDEA 2016.3\lib\i
+ dea_rt.jar" com.intellij.rt.execution.application.AppMain sample.Main
+Main-Class: sample.Main
+

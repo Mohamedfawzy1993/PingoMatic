@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_pingomatic" default="compile.module.pingomatic">
+  <dirname property="module.pingomatic.basedir" file="${ant.file.module_pingomatic}"/>
+  
+  <property name="module.jdk.home.pingomatic" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.pingomatic" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.pingomatic" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.pingomatic" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="pingomatic.output.dir" value="${module.pingomatic.basedir}/out/production/Pingomatic"/>
+  <property name="pingomatic.testoutput.dir" value="${module.pingomatic.basedir}/out/test/Pingomatic"/>
+  
+  <path id="pingomatic.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="pingomatic.module.production.classpath">
+    <path refid="${module.jdk.classpath.pingomatic}"/>
+  </path>
+  
+  <path id="pingomatic.runtime.production.module.classpath">
+    <pathelement location="${pingomatic.output.dir}"/>
+  </path>
+  
+  <path id="pingomatic.module.classpath">
+    <path refid="${module.jdk.classpath.pingomatic}"/>
+    <pathelement location="${pingomatic.output.dir}"/>
+  </path>
+  
+  <path id="pingomatic.runtime.module.classpath">
+    <pathelement location="${pingomatic.testoutput.dir}"/>
+    <pathelement location="${pingomatic.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.pingomatic">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.pingomatic">
+    <patternset refid="excluded.from.module.pingomatic"/>
+  </patternset>
+  
+  <path id="pingomatic.module.sourcepath">
+    <dirset dir="${module.pingomatic.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.pingomatic" depends="compile.module.pingomatic.production,compile.module.pingomatic.tests" description="Compile module Pingomatic"/>
+  
+  <target name="compile.module.pingomatic.production" depends="register.custom.compilers" description="Compile module Pingomatic; production classes">
+    <mkdir dir="${pingomatic.output.dir}"/>
+    <javac2 destdir="${pingomatic.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.pingomatic}/javac">
+      <compilerarg line="${compiler.args.pingomatic}"/>
+      <bootclasspath refid="pingomatic.module.bootclasspath"/>
+      <classpath refid="pingomatic.module.production.classpath"/>
+      <src refid="pingomatic.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.pingomatic"/>
+    </javac2>
+    
+    <copy todir="${pingomatic.output.dir}">
+      <fileset dir="${module.pingomatic.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.pingomatic.tests" depends="register.custom.compilers,compile.module.pingomatic.production" description="compile module Pingomatic; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.pingomatic" description="cleanup module">
+    <delete dir="${pingomatic.output.dir}"/>
+    <delete dir="${pingomatic.testoutput.dir}"/>
+  </target>
+</project>
